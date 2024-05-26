@@ -224,7 +224,7 @@ function DatabaseHasAlreadyBeenImported{
         #Let's go ahead and create the history file if it does not exist
         if(!(test-path $pathtohistoryfile)){
             try{
-                new-item $PathToHistoryFile
+                new-item $PathToHistoryFile -Force
             }
             catch{
                 write-host "Error 1h - Unable to write the history file to the filesystem. Permissions issue?" -ForegroundColor red
